@@ -1,6 +1,6 @@
 # Stream 문제
 
-
+<br>
 
 ## 문제1
 
@@ -19,21 +19,13 @@
 ### 문제 1.1
 위와 같은 데이터를 조회하여 각 취미를 선호하는 인원이 몇 명인지 계산하여라.
 
-
-
 ### 문제 1.2
-
 위와 같은 데이터를 조회하여 각 취미를 선호하는 정씨 성을 갖는 인원이 몇 명인지 계산하여라.
 
-
-
 ### 문제 1.3
-
 위와 같은 데이터를 조회하여 소개 내용에 '좋아'가 몇번 등장하는지 계산하여라.
 
-
-
-
+<br>
 
 ## 문제2
 
@@ -45,18 +37,14 @@ private static List<String> WORDS = Arrays.asList("TONY", "a", "hULK", "B", "ame
 
 
 ### 문제 2.1
-
 List에 저장된 단어들의 접두사가 각각 몇개씩 있는지 Map<String, Integer>으로 변환하여라.
 ex) ("T", 1), ("a", 2) ...
 
-
-
 ### 문제 2.2
-
 List에 저장된 단어들 중에서 단어의 길이가 2 이상인 경우에만, 모든 단어를 대문자로 변환하여 스페이스로 구분한 하나의 문자열로 합한 결과를 반환하여라.
 ex) ["Hello", "a", "Island", "b"] -> “HI”
 
-
+<br>
 
 ## 문제 3
 
@@ -68,40 +56,36 @@ private static List<Integer> numbers2 = Arrays.asList(3, 4);
 
 
 ### 문제 3.1
-
 위와 같은 숫자 리스트가 있을 때 모든 숫자 쌍의 배열 리스트를 반환하여라.
 ex) numbers1 = [1,2,3], numbers2 =  [3,4] -> [(1,3), (1,4), (2,3), (2,4), (3,3), (3,4)]
 
-
+<br>
 
 ### 문제 3.2
-
 위와 같은 숫자 리스트가 있을 때 모든 숫자 쌍의 곱이 가장 큰 값을 반환하여라.
 ex) numbers1 = [1,2,3], numbers2 =  [3,4] -> 12
 
 
-
+<br>
+<br>
 
 
 ## 문제4
+아래와 같은 데이터를 갖는 거래자와 거래 내역 클래스가 있다고 하자.
+(생성자 및 Getter, Setter 등은 생략)
 
 ```java
 public class Trader {
     private String name;
     private String city;
 }
-```
 
-```java
 public class Transaction {
     private Trader trader;
     private int year;
     private int value;
 }
 ```
-위와 같은 데이터를 갖는 거래자와 거래 내역 클래스가 있다고 하자.
-(생성자 및 Getter, Setter 등은 생략)
-
 
 
 또한 데이터는 아래와 같이 초기화되어 있다.
@@ -122,7 +106,6 @@ public void init() {
     );
 }
 ```
-
 
 
 ### 문제 4.1
@@ -162,8 +145,9 @@ public void init() {
 
 
 
-
-
+<br>
+<br>
+<br>
 
 
 ## 참고 자료
