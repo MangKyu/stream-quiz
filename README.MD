@@ -144,10 +144,77 @@ public void init() {
 단, 최댓값은 reduce를 이용하고 최솟값은 stream의 min()을 이용하라.
 
 
+<br>
+<br>
+
+## 문제 5
+
+### 문제 5.1
+문자열 배열 String[] strArr = {"aaa","bb","c","dddd"}의 모든 문자열의 길이를 더한 결과를 출력하여라.
+
+<br>
+
+### 문제 5.2
+문자열 배열 String[] strArr = {"aaa","bb","c","dddd"}의 문자열 중에서 가장 긴 것의 길이를 출력하시오.
+
+<br>
+
+### 문제 5.3
+임의의 로또번호(1~45)를 정렬해서 출력하시오.
+
+<br>
+
+### 문제 5.4
+두 개의 주사위를 굴려서 나온 눈의 합이 6인 경우를 모두 출력하시오.
+
+
+<br>
+<br>
+
+
+## 문제 6
+아래와 같은 학생 클래스가 있다고 하자.
+(생성자 및 Getter 등은 생략)
+
+```java
+public class Student {
+
+    private String name;
+    private boolean isMale; // 성별
+    private int hak; // 학년
+    private int ban; // 반
+    private int score;
+
+    public String toString() {
+        return String.format("[%s, %s, %d학년 %d반, %3d점 ]", name, isMale ? "남" : "여", hak, ban, score);
+    }
+
+    // groupingBy()에서 사용 성적을 상,중,하 세 단계로 분류
+    enum Level {
+        HIGH, MID, LOW
+    }
+
+}
+```
+
+
+또한 데이터는 Student[] stuArr에 저장되어 있다.
+
+### 문제 6.1
+
+stuArr에서 불합격(150점 미만)한 학생의 수를 남자와 여자로 구별하여라.
+(Boolean, List<Student>)
+
+### 문제 6.2
+각 반별 총점을 학년 별로 나누어 구하여라
+(Map<Integer, Map<Integer, Integer>>)
 
 <br>
 <br>
 <br>
+
+
+
 
 
 ## 참고 자료
