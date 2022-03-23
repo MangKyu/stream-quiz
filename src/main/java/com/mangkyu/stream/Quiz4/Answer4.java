@@ -1,4 +1,4 @@
-package Quiz4;
+package com.mangkyu.stream.Quiz4;
 
 
 import java.util.Arrays;
@@ -6,11 +6,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Quiz4 {
+public class Answer4 {
 
     private List<Transaction> transactions;
 
-    public Quiz4() {
+    public Answer4() {
         init();
     }
 
@@ -31,61 +31,47 @@ public class Quiz4 {
     }
 
     public List<Transaction> quiz1() {
-        List<Transaction> transactionList = transactions.stream()
+        return transactions.stream()
                 .filter(t -> t.getYear() == 2020)
                 .sorted(Comparator.comparing(Transaction::getValue))
                 .collect(Collectors.toList());
-
-        transactionList.forEach(System.out::println);
-        return transactionList;
     }
 
     public List<String> quiz2() {
-        List<String> cities = transactions.stream()
-                .map(t -> t.getTrader().getCity()).distinct().collect(Collectors.toList());
-
-        cities.forEach(System.out::println);
-        return cities;
+        return transactions.stream()
+                .map(t -> t.getTrader().getCity())
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     public List<Trader> quiz3() {
-        List<Trader> traders = transactions.stream()
+        return transactions.stream()
                 .map(Transaction::getTrader)
                 .distinct()
                 .filter(t -> t.getCity().equals("Seoul"))
                 .sorted(Comparator.comparing(Trader::getName))
                 .collect(Collectors.toList());
-
-        traders.forEach(System.out::println);
-        return traders;
     }
 
     public String quiz4() {
-        String names = transactions.stream()
+        return transactions.stream()
                 .map(t -> t.getTrader().getName())
                 .distinct()
                 .sorted()
                 .collect(Collectors.joining(","));
-
-        System.out.println(names);
-        return names;
     }
 
     public boolean quiz5() {
-        boolean isExist = transactions.stream()
+        return transactions.stream()
                 .map(t -> t.getTrader().getCity())
                 .anyMatch(c -> c.equals("Busan"));
-        System.out.println(isExist);
-        return isExist;
     }
 
     public List<Integer> quiz6() {
-        List<Integer> valueList = transactions.stream()
+        return transactions.stream()
                 .filter(t -> t.getTrader().getCity().equals("Seoul"))
-                .map(t -> t.getValue())
+                .map(Transaction::getValue)
                 .collect(Collectors.toList());
-        valueList.forEach(System.out::println);
-        return valueList;
     }
 
     public Integer[] quiz7() {
@@ -98,8 +84,6 @@ public class Quiz4 {
         arr[1] = transactions.stream()
                 .min(Comparator.comparingInt(Transaction::getValue))
                 .orElseThrow(RuntimeException::new).getValue();
-
-        Arrays.stream(arr).forEach(System.out::println);
         return arr;
     }
 

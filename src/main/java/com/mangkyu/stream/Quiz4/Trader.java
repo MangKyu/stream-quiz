@@ -1,27 +1,16 @@
-package Quiz4;
+package com.mangkyu.stream.Quiz4;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Objects;
 
+@Getter
+@RequiredArgsConstructor
 public class Trader {
-    private String name;
-    private String city;
 
-    public Trader(String n, String c) {
-        name = n;
-        city = c;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String newCity) {
-        city = newCity;
-    }
+    private final String name;
+    private final String city;
 
     @Override
     public int hashCode() {

@@ -1,7 +1,6 @@
-package Quiz6;
+package com.mangkyu.stream.Quiz6;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -9,33 +8,23 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.summingInt;
 
-public class Quiz6 {
+public class Answer6 {
 
     private Student[] stuArr;
 
-    public Quiz6() {
+    public Answer6() {
         init();
     }
 
-    public void quiz1() {
-        Map<Boolean, List<Student>> map = new HashMap<Boolean, List<Student>>();
-
-        Stream.of(stuArr)
+    public Map<Boolean, List<Student>> quiz1() {
+        return Arrays.stream(stuArr)
                 .filter(s -> s.getScore() < 150)
-                .forEach(s -> map.merge(s.isMale(), new ArrayList<Student>(), (oldValue, newValue) -> {
-                    oldValue.add(s);
-                    return oldValue;
-                }));
-        map.keySet().forEach(k -> map.get(k).forEach(System.out::println));
+                .collect(groupingBy(Student::isMale));
     }
 
     public Map<Integer, Map<Integer, Integer>> quiz2() {
-        Map<Integer, Map<Integer, Integer>> map;
-        map = Stream.of(stuArr)
+        return Stream.of(stuArr)
                 .collect(groupingBy(Student::getHak, groupingBy(Student::getBan, summingInt(Student::getScore))));
-
-        System.out.println(map);
-        return map;
     }
 
     private void init() {
