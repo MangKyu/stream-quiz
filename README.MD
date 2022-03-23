@@ -5,7 +5,7 @@
 ## 문제1
 
 아래와 같은 User.csv가 있다고 할 때, 아래의 CSV 데이터를 조회하여 아래와 같은 결과를 출력한다고 하자.
-```
+```text
 //User.csv
 이름, 취미, 소개
 김프로, 축구:농구:야구, 구기종목 좋아요
@@ -30,8 +30,8 @@
 ## 문제2
 
 아래와 같은 데이터가 저장된 리스트가 있다고 하자.
-```
-private static List<String> WORDS = Arrays.asList("TONY", "a", "hULK", "B", "america", "X", "nebula", "Korea");
+```java
+private final static List<String> WORDS = Arrays.asList("TONY", "a", "hULK", "B", "america", "X", "nebula", "Korea");
 ```
 
 
@@ -48,9 +48,9 @@ ex) ["Hello", "a", "Island", "b"] -> “HI”
 
 ## 문제 3
 
-```
-private static List<Integer> numbers1 = Arrays.asList(1, 2, 3);
-private static List<Integer> numbers2 = Arrays.asList(3, 4);
+```java
+private static final List<Integer> numbers1 = Arrays.asList(1, 2, 3);
+private static final List<Integer> numbers2 = Arrays.asList(3, 4);
 ```
 
 
@@ -188,12 +188,6 @@ public class Student {
     public String toString() {
         return String.format("[%s, %s, %d학년 %d반, %3d점 ]", name, isMale ? "남" : "여", hak, ban, score);
     }
-
-    // groupingBy()에서 사용 성적을 상,중,하 세 단계로 분류
-    enum Level {
-        HIGH, MID, LOW
-    }
-
 }
 ```
 
