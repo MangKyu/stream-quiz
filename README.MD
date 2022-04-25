@@ -1,3 +1,61 @@
+# Stream API 문제 풀어보기
+위의 문제를 직접 풀어보고 정답이 맞는지 비교가능하도록 프로젝트를 구성해두었습니다. 이번에는 직접 문제를 풀어보고 정답이 맞는지 확인하는 방법에 대해 알아보도록 하겠습니다.
+
+
+### 1. 프로젝트를 클론받는다.
+해당 문제를 직접 풀고 정답을 비교해보기 위해서는 프로젝트를 클론받아야 합니다.
+<br/>
+[이 링크](https://github.com/MangKyu/stream-quiz) 를 통해 깃 프로젝트를 클론합니다.
+
+<br/>
+<br/>
+
+### 2. 원하는 문제 풀어보기
+소스 코드에 문제 번호대로 다음과 같이 패키지 구성 및 클래스 생성을 해두었습니다.
+<br/>
+만약 1.1번 문제를 풀어보고 싶다면 Quiz1 클래스의 quiz1 메소드를 구현하면 됩니다.
+
+<p align="center">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAq1v7%2FbtrwWmZcw9J%2F7qtVQoKwmNKhpakuHM1gN0%2Fimg.png"/>
+</p>
+
+<br/>
+<br/>
+
+### 3. 정답이 맞는지 검사하기
+해당 문제를 풀었다면 곧바로 검증할 수 있도록 자동화된 테스트를 작성해두었습니다.
+<br/>
+만약 1.1번 문제를 풀었고, 정답을 확인해보고 싶다면 Quiz1Test의 quiz1 테스트를 실행해보면 됩니다.
+<br/>
+정답은 Answer 클래스에 작성해두었으니 정답 확인은 Answer 클래스를 참고하면 됩니다.
+
+
+<p align="center">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIT4hP%2FbtrvUBws8i9%2FIlt3Uzdu1PZwXYTFIOrPPk%2Fimg.png"/>
+</p>
+
+
+<br/>
+
+만약 문제를 정상적으로 풀었다면 다음과 같이 테스트가 통과하게 됩니다.
+
+<p align="center">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrUHpz%2Fbtrw8N18MIP%2FJuS4khAEVukxITtaYdUerk%2Fimg.png"/>
+</p>
+
+
+<br/>
+<br/>
+<br/>
+
+Stream API에 입문하시는 많은 분들에게 도움이 되었으면 좋겠네요! <br/>
+잘 보셨다면 깃허브 스타 부탁드리겠습니다!
+감사합니다:)
+
+<br/>
+<br/>
+
+
 # Stream 문제
 
 <br>
@@ -209,62 +267,7 @@ stuArr에서 불합격(150점 미만)한 학생의 수를 남자와 여자로 �
 
 
 
-# Stream API 문제 풀어보기
-위의 문제를 직접 풀어보고 정답이 맞는지 비교가능하도록 프로젝트를 구성해두었습니다. 이번에는 직접 문제를 풀어보고 정답이 맞는지 확인하는 방법에 대해 알아보도록 하겠습니다.
 
-
-### 1. 프로젝트를 클론받는다.
-해당 문제를 직접 풀고 정답을 비교해보기 위해서는 프로젝트를 클론받아야 합니다.
-<br/>
-[이 링크](https://github.com/MangKyu/stream-quiz) 를 통해 깃 프로젝트를 클론합니다.
-
-<br/>
-<br/>
-
-### 2. 원하는 문제 풀어보기
-소스 코드에 문제 번호대로 다음과 같이 패키지 구성 및 클래스 생성을 해두었습니다.
-<br/>
-만약 1.1번 문제를 풀어보고 싶다면 Quiz1 클래스의 quiz1 메소드를 구현하면 됩니다.
-
-<p align="center">
-  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAq1v7%2FbtrwWmZcw9J%2F7qtVQoKwmNKhpakuHM1gN0%2Fimg.png"/>
-</p>
-
-<br/>
-<br/>
-
-### 3. 정답이 맞는지 검사하기
-해당 문제를 풀었다면 곧바로 검증할 수 있도록 자동화된 테스트를 작성해두었습니다. 
-<br/>
-만약 1.1번 문제를 풀었고, 정답을 확인해보고 싶다면 Quiz1Test의 quiz1 테스트를 실행해보면 됩니다.
-<br/>
-정답은 Answer 클래스에 작성해두었으니 정답 확인은 Answer 클래스를 참고하면 됩니다.
-
-
-<p align="center">
-  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIT4hP%2FbtrvUBws8i9%2FIlt3Uzdu1PZwXYTFIOrPPk%2Fimg.png"/>
-</p>
-
-
-<br/>
-
-만약 문제를 정상적으로 풀었다면 다음과 같이 테스트가 통과하게 됩니다.
-
-<p align="center">
-  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrUHpz%2Fbtrw8N18MIP%2FJuS4khAEVukxITtaYdUerk%2Fimg.png"/>
-</p>
-
-
-<br/>
-<br/>
-<br/>
-
-Stream API에 입문하시는 많은 분들에게 도움이 되었으면 좋겠네요! <br/>
-잘 보셨다면 깃허브 스타 부탁드리겠습니다!
-감사합니다:)
-
-<br/>
-<br/>
 
 ## 참고 자료
 
