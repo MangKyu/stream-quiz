@@ -18,7 +18,7 @@ public class Answer3 {
     public int quiz2() {
         return numbers1.stream()
                 .flatMap(n -> numbers2.stream().map(m -> new Integer[]{n, m}))
-                .mapToInt(a -> Integer.sum(a[0], a[1]))
+                .mapToInt(a -> a[0] * a[1])
                 .max().orElse(0);
     }
 
