@@ -16,9 +16,7 @@ public class Answer1 {
 
     public Map<String, Integer> quiz1() throws IOException {
         // https://jeong-pro.tistory.com/212
-        CSVReader csvReader = new CSVReader(new FileReader(getClass().getResource("/user.csv").getFile()));
-        csvReader.readNext();
-        List<String[]> csvLines = csvReader.readAll();
+        List<String[]> csvLines = readCsvLines();
 
         return csvLines.stream()
                 .map(line -> line[1].replaceAll("\\s", ""))
@@ -27,9 +25,7 @@ public class Answer1 {
     }
 
     public Map<String, Integer> quiz2() throws IOException {
-        CSVReader csvReader = new CSVReader(new FileReader(getClass().getResource("/user.csv").getFile()));
-        csvReader.readNext();
-        List<String[]> csvLines = csvReader.readAll();
+        List<String[]> csvLines = readCsvLines();
 
         return csvLines.stream()
                 .filter(line -> line[0].startsWith("정"))
@@ -39,9 +35,7 @@ public class Answer1 {
     }
 
     public int quiz3() throws IOException {
-        CSVReader csvReader = new CSVReader(new FileReader(getClass().getResource("/user.csv").getFile()));
-        csvReader.readNext();
-        List<String[]> csvLines = csvReader.readAll();
+        List<String[]> csvLines = readCsvLines();
 
         return csvLines.stream()
                 .map(line -> countContains(line[2], 0))
@@ -54,6 +48,12 @@ public class Answer1 {
             return 1 + countContains(src, index + TARGET_LENGTH);
         }
         return 0;
+    }
+
+    private List<String[]> readCsvLines() throws IOException {
+        CSVReader csvReader = new CSVReader(new FileReader(getClass().getResource("/user.csv").getFile()));
+        csvReader.readNext();
+        return csvReader.readAll();
     }
 
 }
