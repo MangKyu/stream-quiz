@@ -1,33 +1,18 @@
 package com.mangkyu.stream.Quiz6;
 
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.summingInt;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.summingInt;
 
 public class Answer6 {
 
     private Student[] stuArr;
 
     public Answer6() {
-        init();
-    }
-
-    public Map<Boolean, List<Student>> quiz1() {
-        return Arrays.stream(stuArr)
-                .filter(s -> s.getScore() < 150)
-                .collect(groupingBy(Student::isMale));
-    }
-
-    public Map<Integer, Map<Integer, Integer>> quiz2() {
-        return Stream.of(stuArr)
-                .collect(groupingBy(Student::getHak, groupingBy(Student::getBan, summingInt(Student::getScore))));
-    }
-
-    private void init() {
         stuArr = new Student[]{
                 new Student("나자바", true, 1, 1, 300),
                 new Student("김지미", false, 1, 1, 250),
@@ -48,7 +33,17 @@ public class Answer6 {
                 new Student("강지미", false, 2, 3, 150),
                 new Student("이자바", true, 2, 3, 200)
         };
+    }
 
+    public Map<Boolean, List<Student>> quiz1() {
+        return Arrays.stream(stuArr)
+                .filter(s -> s.getScore() < 150)
+                .collect(groupingBy(Student::isMale));
+    }
+
+    public Map<Integer, Map<Integer, Integer>> quiz2() {
+        return Stream.of(stuArr)
+                .collect(groupingBy(Student::getHak, groupingBy(Student::getBan, summingInt(Student::getScore))));
     }
 
 }

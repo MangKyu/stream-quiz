@@ -9,18 +9,6 @@ public class Quiz6 {
     private Student[] stuArr;
 
     public Quiz6() {
-        init();
-    }
-
-    public Map<Boolean, List<Student>> quiz1() {
-        return new HashMap<>();
-    }
-
-    public Map<Integer, Map<Integer, Integer>> quiz2() {
-        return new HashMap<>();
-    }
-
-    private void init() {
         stuArr = new Student[]{
                 new Student("나자바", true, 1, 1, 300),
                 new Student("김지미", false, 1, 1, 250),
@@ -41,7 +29,16 @@ public class Quiz6 {
                 new Student("강지미", false, 2, 3, 150),
                 new Student("이자바", true, 2, 3, 200)
         };
+    }
 
+    // stuArr에서 불합격(150점 미만)한 학생의 수를 남자와 여자로 구별하여라. (Boolean, List)
+    public Map<Boolean, List<Student>> quiz1() {
+        return new HashMap<>();
+    }
+
+    // 각 반별 총점을 학년 별로 나누어 구하여라 (Map<Integer, Map<Integer, Integer>>)
+    public Map<Integer, Map<Integer, Integer>> quiz2() {
+        return new HashMap<>();
     }
 
 }
