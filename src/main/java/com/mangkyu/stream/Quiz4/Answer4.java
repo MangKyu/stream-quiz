@@ -1,6 +1,5 @@
 package com.mangkyu.stream.Quiz4;
 
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -11,10 +10,6 @@ public class Answer4 {
     private List<Transaction> transactions;
 
     public Answer4() {
-        init();
-    }
-
-    private void init() {
         Trader kyu = new Trader("Kyu", "Seoul");
         Trader ming = new Trader("Ming", "Gyeonggi");
         Trader hyuk = new Trader("Hyuk", "Seoul");
