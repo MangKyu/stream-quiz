@@ -40,7 +40,7 @@ public class Quiz4 {
         return Collections.emptyList();
     }
 
-    // 4.4 모든 거래자의 이름을 순서대로 정렬하라.
+    // 4.4 모든 거래자의 이름을 구분자(",")로 구분하여 정렬하라.
     public String quiz4() {
         return null;
     }
