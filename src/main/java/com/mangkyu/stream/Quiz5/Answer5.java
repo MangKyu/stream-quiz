@@ -28,6 +28,7 @@ public class Answer5 {
                 .distinct()
                 .limit(6)
                 .boxed()
+                .sorted()
                 .collect(Collectors.toList());
     }
 
